@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <UserSecretsId>54B641E5-96F0-430B-B79E-499FD77BBC20</UserSecretsId>
+        <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BitplatformWasmMode.Server.Api\BitplatformWasmMode.Server.Api.csproj" />
+        <ProjectReference Include="..\..\Client\BitplatformWasmMode.Client.Web\BitplatformWasmMode.Client.Web.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="BitplatformWasmMode.Shared.Enums" />
+    </ItemGroup>
+
+    <!--
+    https://learn.microsoft.com/en-us/dotnet/core/docker/publish-as-container
+    https://learn.microsoft.com/en-us/visualstudio/containers/container-msbuild-properties
+    -->
+    <PropertyGroup>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <EnableSdkContainerDebugging Condition="'$(Configuration)' == 'Debug'">True</EnableSdkContainerDebugging>
+    </PropertyGroup>
+
+</Project>

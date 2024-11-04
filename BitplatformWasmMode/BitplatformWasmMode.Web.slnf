@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "BitplatformWasmMode.sln",
+    "projects": [
+      "src\\Client\\BitplatformWasmMode.Client.Core\\BitplatformWasmMode.Client.Core.csproj",
+      "src\\Client\\BitplatformWasmMode.Client.Web\\BitplatformWasmMode.Client.Web.csproj",
+      "src\\Server\\BitplatformWasmMode.Server.Api\\BitplatformWasmMode.Server.Api.csproj",
+      "src\\Server\\BitplatformWasmMode.Server.Web\\BitplatformWasmMode.Server.Web.csproj",
+      "src\\Shared\\BitplatformWasmMode.Shared.csproj",
+      "src\\Tests\\BitplatformWasmMode.Tests.csproj"
+    ]
+  }
+}
